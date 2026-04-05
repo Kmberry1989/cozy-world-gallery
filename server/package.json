@@ -1,0 +1,7 @@
+
+{
+  "dependencies": {
+    "colyseus": "^0.15",
+    "express": "^4"
+  }
+}
