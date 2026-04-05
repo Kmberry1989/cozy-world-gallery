@@ -9,6 +9,11 @@ Features:
 
 ## Run
 
+ONE COMMAND:
+cd /Users/kyleberry/Documents/GitHub/cozy-world-gallery
+npm install
+npm run dev
+
 CLIENT:
 cd client
 npm install

@@ -1,0 +1,13 @@
+{
+  "name": "cozy-world-gallery",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c yellow,cyan \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "postinstall": "npm install --prefix server && npm install --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
