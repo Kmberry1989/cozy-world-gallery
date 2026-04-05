@@ -9,12 +9,17 @@ export async function init(){
   room = await client.joinOrCreate("world");
 
   room.onStateChange(state=>{
-    useStore.getState().setPlayers({...state.players});
-    useStore.getState().setGallery(state.gallery);
-  });
+    const players = typeof state.players?.entries === "function"
+      ? Object.fromEntries(state.players.entries())
+      : {...state.players};
+    const gallery = Array.from(state.gallery ?? [], (item) => ({
+      url: item.url,
+      x: item.x,
+      y: item.y
+    }));
 
-  room.onMessage("placed",o=>{
-    useStore.getState().addObject(o);
+    useStore.getState().setPlayers(players);
+    useStore.getState().setGallery(gallery);
   });
 }
 

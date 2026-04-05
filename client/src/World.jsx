@@ -1,5 +1,5 @@
 
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useStore } from "./store";
 import { init } from "./network";
 

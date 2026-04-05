@@ -7,5 +7,5 @@ export const useStore = create(set => ({
   gallery:[],
   setPlayers:p=>set({players:p}),
   addObject:o=>set(s=>({objects:[...s.objects,o]})),
-  setGallery:g=>set({gallery:g})
+  setGallery:g=>set({gallery:g, objects:g})
 }));

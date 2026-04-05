@@ -1,4 +1,5 @@
 
+import React from "react";
 import { placeArt } from "../network";
 
 export default function UI(){

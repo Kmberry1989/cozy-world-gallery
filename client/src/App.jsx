@@ -1,4 +1,5 @@
 
+import React from "react";
 import { Canvas } from "@react-three/fiber";
 import World from "./World";
 import UI from "./ui/UI";
